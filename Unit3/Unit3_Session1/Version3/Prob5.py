@@ -24,7 +24,7 @@ def length_of_longest_substring(s):
   max_length = 0
   start_index = 0
   index_dict = {}
-  
+
   for i, char in enumerate(s):
     if char in index_dict:
       start_index = index_dict[char] + 1 
