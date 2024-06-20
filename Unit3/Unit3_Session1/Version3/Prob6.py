@@ -6,7 +6,7 @@
 #create a map {"Roman ele": "numerical val"}
 #integer_numerical_val = 0
 #iterate over the string s
- #check the curr char val < next char val
+ #check the index of next char val is within the range of bound and curr char val < next char val
   #subtract the curr char val from integer_numerical_val
 #else: add the curr char val to integer_numerical_val
 #return integer_numerical_val
