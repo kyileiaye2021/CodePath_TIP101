@@ -23,11 +23,8 @@ def roman_to_int(s):
   integer_numerical_val = 0
 
   for i in range(len(s)):
-    if i < len(s) - 1:
-      if roman_int_map[s[i]] < roman_int_map[s[i+1]]:
-        integer_numerical_val -= roman_int_map[s[i]]
-      else:
-        integer_numerical_val += roman_int_map[s[i]]
+    if i + 1 < len(s) and roman_int_map[s[i]] < roman_int_map[s[i+1]]:
+      integer_numerical_val -= roman_int_map[s[i]]
     else:
       integer_numerical_val += roman_int_map[s[i]]
 
