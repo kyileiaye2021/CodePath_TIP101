@@ -1,23 +1,23 @@
+def reverse_only_letters(s):
+  char_lst = list(s)
+  right = len(char_lst) - 1
+  i = 0
 
-def find_the_needle(haystack, needle):
-  left, right = 0, 0
+  while i < right:
 
-  for char in haystack:
-    if char in needle:
-      right += 1
-      if len(needle) == right - left:
-        return left
+    if char_lst[i].isalpha():
 
-    else:
-      right += 1
-      left = right
+      if char_lst[right].isalpha():
+        temp = char_lst[i]
+        char_lst[i] = char_lst[right]
+        char_lst[right] = temp
 
-  return -1
+      right -= 1
+    i += 1
 
-haystack = "tobeornottobe"
-needle = "be"
-print(find_the_needle(haystack, needle))
+  s = ''.join(char_lst)
+  return s
 
-haystack2 = "leetcode"
-needle2 = "leeto"
-print(find_the_needle(haystack2, needle2))
+s = "a-bC-dEf-ghIj"
+reversed_s = reverse_only_letters(s)
+print(reversed_s)
