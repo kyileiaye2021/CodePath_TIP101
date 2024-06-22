@@ -1,18 +1,19 @@
-def count_consecutive_characters(str1):
-  count = 1
-  i = 1
-  while i < len(str1):
-    if str1[i] == str1[i - 1]:
-      count += 1
-    else:
-      count = 1
-    i += 1
-    
-  return count
+def partition_label(s):
+  lastest_index = {}
+  for i in range(len(s)):
+    lastest_index[s[i]] = i
 
-str1 = "aaabbcaaaa"
-count = count_consecutive_characters(str1)
-print(count)
-str2 = "abcde"
-count2 = count_consecutive_characters(str2)
-print(count2)
+  partition_lst = []
+  start, end = 0,0
+  for i, char in enumerate(s):
+    end = max(end, lastest_index[char])
+    if i == end:
+      partition_lst.append(end - start + 1)
+      start = i + 1
+  return partition_lst
+
+s1 = "ababcbacadefegdehijhklij"
+print(partition_label(s1))
+
+s2 = "abcabcbadefffeda"
+print(partition_label(s2))
