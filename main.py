@@ -1,30 +1,58 @@
-def find_missing_positive(nums):
-  if len(nums) == 0:
-    return 1
-  if len(nums) == 1:
-    return 2
+def wordPattern(pattern, s):
+  if not pattern and not s:
+    return True
+  if not pattern and s:
+    return False
+  if pattern and not s:
+    return False
 
-  res = 0
-  for i in range(1, len(nums)):
-    diff = nums[i] - nums[i-1]
-    if diff > 1:
-      return nums[i-1] + 1
-    else:
-      res = nums[i]
+  s_lst = s.split()
+  if len(pattern) != len(s_lst):
+    return False
 
-  return (res + 1)
+  pattern_match = {}
+  #filling up the pattern_match map
+  for i in range(len(s_lst)):
+    pattern_match[pattern[i]] = s_lst[i]
 
-nums1 = [1,2,3,5,6,10]
-print(find_missing_positive(nums1)) #4
+  for i in range(len(pattern)):
+    if pattern_match[pattern[i]] != s_lst[i]:
+      return False
 
-nums2 = [1,2,3,4,5]
-print(find_missing_positive(nums2)) #6
+  return True
 
-nums3 = []
-print(find_missing_positive(nums3)) #1
+pattern = None
+s = None
+print(wordPattern(pattern, s)) #True
 
-nums4 = [1]
-print(find_missing_positive(nums4)) #2
+pattern2 = None
+s2 = "dog cat" 
+print(wordPattern(pattern2, s2)) #False
 
-nums5 = [1,1]
-print(find_missing_positive(nums5)) #2
+pattern3 = "abba"
+s3 = None
+print(wordPattern(pattern3, s3)) #False
+
+pattern4 = ""
+s4 = ""
+print(wordPattern(pattern4, s4)) #True
+
+pattern5 = ""
+s5 = "dog cat"
+print(wordPattern(pattern5, s5)) #False
+
+pattern6 = "abba"
+s6 = ""
+print(wordPattern(pattern6, s6)) #False
+
+pattern = "abba"
+s = "dog cat cat dog"
+print(wordPattern(pattern, s)) #True
+s2 = "dog cat cat fish"
+print(wordPattern(pattern, s2)) #False
+
+pattern2 = "aaaa"
+s3 = "dog cat dog cat"
+print(wordPattern(pattern2, s3)) #False
+s4 = "dog dog dog dog"
+print(wordPattern(pattern2, s4)) #True
