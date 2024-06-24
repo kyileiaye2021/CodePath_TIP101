@@ -1,58 +1,49 @@
-def wordPattern(pattern, s):
-  if not pattern and not s:
-    return True
-  if not pattern and s:
-    return False
-  if pattern and not s:
-    return False
+def binary_substrings_count(s):
+  if not s:
+    return 0
+  l, r = 0, 1
+  curr_length = 1
+  group_length_list = []
 
-  s_lst = s.split()
-  if len(pattern) != len(s_lst):
-    return False
+  while r < len(s):
+    if s[r] != s[r-1]:
+      group_length_list.append(curr_length)
+      l += curr_length
+      curr_length = 1
 
-  pattern_match = {}
-  #filling up the pattern_match map
-  for i in range(len(s_lst)):
-    pattern_match[pattern[i]] = s_lst[i]
+    else:
+      curr_length += 1
 
-  for i in range(len(pattern)):
-    if pattern_match[pattern[i]] != s_lst[i]:
-      return False
+    r += 1
+  group_length_list.append(curr_length)
+  
+  counter = 0
 
-  return True
+  for i in range(1,len(group_length_list)):
+    counter += min(group_length_list[i], group_length_list[i-1])
 
-pattern = None
-s = None
-print(wordPattern(pattern, s)) #True
+  return counter
 
-pattern2 = None
-s2 = "dog cat" 
-print(wordPattern(pattern2, s2)) #False
 
-pattern3 = "abba"
-s3 = None
-print(wordPattern(pattern3, s3)) #False
 
-pattern4 = ""
+
+s = "00110011"
+print(binary_substrings_count(s)) #6
+
+s2 = "10101"
+print(binary_substrings_count(s2)) #4
+
+s3 = "1111"
+print(binary_substrings_count(s3)) #0
+
 s4 = ""
-print(wordPattern(pattern4, s4)) #True
+print(binary_substrings_count(s4)) #0
 
-pattern5 = ""
-s5 = "dog cat"
-print(wordPattern(pattern5, s5)) #False
+s5 = None
+print(binary_substrings_count(s5)) #0
 
-pattern6 = "abba"
-s6 = ""
-print(wordPattern(pattern6, s6)) #False
+s6 = "0"
+print(binary_substrings_count(s6)) #0
 
-pattern = "abba"
-s = "dog cat cat dog"
-print(wordPattern(pattern, s)) #True
-s2 = "dog cat cat fish"
-print(wordPattern(pattern, s2)) #False
-
-pattern2 = "aaaa"
-s3 = "dog cat dog cat"
-print(wordPattern(pattern2, s3)) #False
-s4 = "dog dog dog dog"
-print(wordPattern(pattern2, s4)) #True
+s7 = "1"
+print(binary_substrings_count(s7)) #0
