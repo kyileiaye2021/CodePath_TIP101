@@ -39,20 +39,16 @@
   #check curr length < prev length
     #counter += curr length
     
-
-
-
 def binary_substrings_count(s):
   if not s:
     return 0
-  l, r = 0, 1
+  r = 1
   curr_length = 1
   group_length_list = []
 
   while r < len(s):
     if s[r] != s[r-1]:
       group_length_list.append(curr_length)
-      l += curr_length
       curr_length = 1
 
     else:
