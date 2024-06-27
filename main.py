@@ -1,18 +1,14 @@
-#checking prime number 
-#divide the number by the num from the range of 2 to the num before that number
-def is_prime(n):
-  if n <= 1:
-    return False
-
-  i = 2
-  while i < n:
-    if n % i == 0:
-      return False
-    i += 1
-    
-  return True
-
-
-print(is_prime(5))
-print(is_prime(12))
-print(is_prime(2))
+def reverse_list(lst):
+  l = 0 
+  r = len(lst) - 1
+  while l < r:
+    temp = lst[l]
+    lst[l] = lst[r]
+    lst[r] = temp
+    l += 1
+    r -= 1
+  return lst
+lst = [1, 2, 3, 4, 5]
+print(reverse_list(lst))
+lst = []
+print(reverse_list(lst))
