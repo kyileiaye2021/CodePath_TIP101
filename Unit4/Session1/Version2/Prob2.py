@@ -16,6 +16,8 @@
 #    * move right pointer to left by 1
 # * return True
 
+#Time complexity - O(n)
+#Space complexity - O(1)
 def is_palindrome(s):
   l = 0
   r = len(s) - 1
