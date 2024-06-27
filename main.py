@@ -1,21 +1,28 @@
-def sort_array_by_parity(nums):
-  a = 0
-  b = len(nums) - 1
-  while a < b:
-    if nums[a] % 2 == 0: #check the left pointer var is even or odd
-      a += 1
-    else:
-      if nums[b] % 2 == 0: #check the right pointer var is even or odd
-        temp = nums[a]
-        nums[a]= nums[b]
-        nums[b] = temp
-        a += 1
+def first_palindrome(words):
 
-      b -= 1
+  res = ""
+  for word in words:
+    l = 0
+    r = len(word) - 1
+    is_palindrome = True
+    while l < r:
+      if word[l] != word[r]:
+        is_palindrome = False
+      l += 1
+      r -= 1
 
-  return nums
+    if is_palindrome:
+      return word
+  return res
 
-nums = [3,1,2,4]
-nums2 = [0]
-print(sort_array_by_parity(nums))
-print(sort_array_by_parity(nums2))
+words = ["abc","car","ada","racecar","cool"]
+palindrome1 = first_palindrome(words)
+print(palindrome1)
+
+words2 = ["abc","racecar","cool"]
+palindrome2 = first_palindrome(words2)
+print(palindrome2)
+
+words3 = ["abc", "def", "ghi"]
+palindrome3 = first_palindrome(words3)
+print(palindrome3)
