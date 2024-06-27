@@ -1,10 +1,21 @@
-def reverse_list(lst):
-  # Create a new reversed list
-  reversed_lst = lst[::-1]
-  # Copy the elements back into the original list
-  for i in range(len(lst)):
-      lst[i] = reversed_lst[i]
-  return lst
+def sort_array_by_parity(nums):
+  a = 0
+  b = len(nums) - 1
+  while a < b:
+    if nums[a] % 2 == 0: #check the left pointer var is even or odd
+      a += 1
+    else:
+      if nums[b] % 2 == 0: #check the right pointer var is even or odd
+        temp = nums[a]
+        nums[a]= nums[b]
+        nums[b] = temp
+        a += 1
 
-lst = [1, 2, 3, 4, 5]
-print(reverse_list(lst))
+      b -= 1
+
+  return nums
+
+nums = [3,1,2,4]
+nums2 = [0]
+print(sort_array_by_parity(nums))
+print(sort_array_by_parity(nums2))
