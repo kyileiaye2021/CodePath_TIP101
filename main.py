@@ -1,13 +1,16 @@
-def is_perfect_number(n):
-  sum = 0
-  for i in range(1, n):
-    if n % i == 0:
-      sum += i
-  if n == sum:
-    return True
+def is_palindrome(s):
+  l = 0
+  r = len(s) - 1
+  while l < r:
+    if s[l] != s[r]:
+      return False
+    l += 1
+    r -= 1
 
-  return False
+  return True 
 
-print(is_perfect_number(6))
-print(is_perfect_number(28))
-print(is_perfect_number(9))
+s = "amanaplanacanalpanama"
+s2 = "hello world"
+
+print(is_palindrome(s))
+print(is_palindrome(s2))
