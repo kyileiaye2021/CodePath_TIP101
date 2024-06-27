@@ -1,4 +1,4 @@
-# CodePath Introduction To Technical Prep Course (TIP 101)
+# CodePath - Introduction To Technical Prep Course (TIP 101)
 # Main Problem Solving Technique
   **UPI** method is the main key for solving coding problems and basic foundation for technical interviews. 
 1. U - Understand (Trying to understand the question and communicating with interviewer about questions and edge cases)
