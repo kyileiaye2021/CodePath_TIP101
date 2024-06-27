@@ -1,28 +1,21 @@
-def first_palindrome(words):
+def remove_duplicates(nums):
+  a = 1
+  b = 1
 
-  res = ""
-  for word in words:
-    l = 0
-    r = len(word) - 1
-    is_palindrome = True
-    while l < r:
-      if word[l] != word[r]:
-        is_palindrome = False
-      l += 1
-      r -= 1
+  while a < len(nums):
+    if nums[a] != nums[a - 1]:
+      nums[b] = nums[a]
+      b += 1
+    a += 1
 
-    if is_palindrome:
-      return word
-  return res
+  del nums[b:] #this doesn't create O(n) 
 
-words = ["abc","car","ada","racecar","cool"]
-palindrome1 = first_palindrome(words)
-print(palindrome1)
+nums = [1,1,2,3,4,4,4,5]
+print(nums)
+print(remove_duplicates(nums))
+print(nums) # same list
 
-words2 = ["abc","racecar","cool"]
-palindrome2 = first_palindrome(words2)
-print(palindrome2)
-
-words3 = ["abc", "def", "ghi"]
-palindrome3 = first_palindrome(words3)
-print(palindrome3)
+nums1 = [1]
+print(nums1)
+print(remove_duplicates(nums1))
+print(nums1)
