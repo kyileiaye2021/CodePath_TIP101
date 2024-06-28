@@ -1,35 +1,23 @@
-def make_palindrome(s):
-  char_lst = list(s)
-  left = 0
-  right = len(char_lst) - 1
-  while left < right:
-    if char_lst[left] != char_lst[right]:
-      if char_lst[right] > char_lst[left]:
-        char_lst[right] = char_lst[left]
-      else:
-        char_lst[left] = char_lst[right]
-    left += 1
-    right -= 1
+def reverse_vowels(s):
+  char_lst = list(s.lower())
+  vowels = 'aeiou'
+  l, r = 0, len(s) - 1
 
-  return "".join(char_lst)
+  while l < r:
+    if char_lst[l] in vowels:
+      if char_lst[r] in vowels:
+        temp = char_lst[l]
+        char_lst[l] = char_lst[r]
+        char_lst[r] = temp
+      r -= 1
+    else:
+      l += 1
+  return ''.join(char_lst)
 
-s = "egcfe"
-s_pal = make_palindrome(s)
-print(s_pal)
-# s_pal == "efcfe"
-# The min number of operations to make s a palindrome is 1 by changing `f` to `g`
-# another palindrome possible is "egcge", but it is not lexicographically smaller
+s1 = "hello"
+rev_s1 = reverse_vowels(s1)
+print(rev_s1)
 
-s1 = "abcd"
-s_pal1 = make_palindrome(s1)
-print(s_pal1)
-# s_pal == "abba"
-# The min number of operations to make s a palindrome is 2 by changing `c` to `b` and `d` to `a`
-# a palindrome cannot be created in 1 operation
-
-s2 = "seven"
-s_pal2 = make_palindrome(s2)
-print(s_pal2)
-# s_pal == "neven"
-# The min number of operations to make s a palindrome is 1 by changing `s` to `n`
-# to get a palindrome that is lexographically smaller, it would take more operations
+s2 = "leetcode"
+rev_s2 = reverse_vowels(s2)
+print(rev_s2)
