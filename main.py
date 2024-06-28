@@ -1,31 +1,19 @@
-def reverse_prefix(word, ch):
-  second = 0
-  for i, ele in enumerate(word):
-    if ele == ch:
-      second = i
-      break
+def squash_spaces(s):
+  char_lst = list(s)
+  unique_index = 0
+  for i in range(0, len(char_lst)):
+    if (char_lst[i] != ' '):
+      char_lst[unique_index] = char_lst[i]
+      unique_index += 1
 
-  char_list = list(word)
-  first = 0
+    else:
+      if i != 0 and char_lst[i - 1] != ' ':
+        char_lst[unique_index] = char_lst[i]
+        unique_index += 1
 
-  while first < second:
-    temp = char_list[first]
-    char_list[first] = char_list[second]
-    char_list[second] = temp
-    first += 1
-    second -= 1
-    
-  return "".join(char_list)
+  del char_lst[unique_index:]
+  return "".join(char_lst)
 
-
-word = "abcdefd"
-rev_word = reverse_prefix(word, "d")
-print(rev_word)
-
-word2 = "helloworld"
-rev_word2 = reverse_prefix(word2, "w")
-print(rev_word2)
-
-word3 = "xyzxyz"
-rev_word3 = reverse_prefix(word3, "a")
-print(rev_word3)
+print(squash_spaces("  hello    world  "))
+print(squash_spaces("  what  about  this    ?"))
+print(squash_spaces("this is my sentence"))
