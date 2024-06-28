@@ -1,23 +1,15 @@
-def reverse_vowels(s):
-  char_lst = list(s.lower())
-  vowels = 'aeiou'
-  l, r = 0, len(s) - 1
+def removeElement(nums, val):
+  unique_index = 0
 
-  while l < r:
-    if char_lst[l] in vowels:
-      if char_lst[r] in vowels:
-        temp = char_lst[l]
-        char_lst[l] = char_lst[r]
-        char_lst[r] = temp
-      r -= 1
-    else:
-      l += 1
-  return ''.join(char_lst)
+  for i, num in enumerate(nums):
+    if num != val:
+      nums[unique_index] = num
+      unique_index += 1
 
-s1 = "hello"
-rev_s1 = reverse_vowels(s1)
-print(rev_s1)
+  del nums[unique_index:]
+  return len(nums)
 
-s2 = "leetcode"
-rev_s2 = reverse_vowels(s2)
-print(rev_s2)
+nums = [5, 4, 4, 3, 4, 1]
+nums_len = removeElement(nums, 4)
+print(nums) # same list
+print(nums_len)
