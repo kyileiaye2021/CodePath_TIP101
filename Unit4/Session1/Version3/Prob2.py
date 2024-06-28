@@ -28,6 +28,8 @@
 #    *otherwise, add l and r to the list
 # return the list
 
+# Time complexity - O(n)
+# Space complexity - O(1)
 
 def two_sum(nums, target):
   l, r = 0, len(nums) -1
