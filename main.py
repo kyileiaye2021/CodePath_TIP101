@@ -1,18 +1,31 @@
-def reverse_only_letters(s):
-  letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  char_lst = list(s)
-  l, r = 0, len(char_lst) - 1
+def reverse_prefix(word, ch):
+  second = 0
+  for i, ele in enumerate(word):
+    if ele == ch:
+      second = i
+      break
 
-  while l < r:
-    if char_lst[l] in letters:
-      if char_lst[r] in letters:
-        temp = char_lst[l]
-        char_lst[l] = char_lst[r]
-        char_lst[r] = temp
-      r -= 1
-    l += 1
-  return "".join(char_lst)
-  
-s = "a-bC-dEf-ghIj"
-reversed_s = reverse_only_letters(s)
-print(reversed_s)
+  char_list = list(word)
+  first = 0
+
+  while first < second:
+    temp = char_list[first]
+    char_list[first] = char_list[second]
+    char_list[second] = temp
+    first += 1
+    second -= 1
+    
+  return "".join(char_list)
+
+
+word = "abcdefd"
+rev_word = reverse_prefix(word, "d")
+print(rev_word)
+
+word2 = "helloworld"
+rev_word2 = reverse_prefix(word2, "w")
+print(rev_word2)
+
+word3 = "xyzxyz"
+rev_word3 = reverse_prefix(word3, "a")
+print(rev_word3)
