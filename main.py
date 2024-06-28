@@ -1,15 +1,11 @@
-def removeElement(nums, val):
-  unique_index = 0
+def find_highest_exponent(base, limit):
+  i = 1
+  while base ** i < limit:
+    i += 1
+  return i-1
 
-  for i, num in enumerate(nums):
-    if num != val:
-      nums[unique_index] = num
-      unique_index += 1
+exp = find_highest_exponent(2, 100)
+print(exp)
 
-  del nums[unique_index:]
-  return len(nums)
-
-nums = [5, 4, 4, 3, 4, 1]
-nums_len = removeElement(nums, 4)
-print(nums) # same list
-print(nums_len)
+exp2 = find_highest_exponent(3, 5)
+print(exp2)
