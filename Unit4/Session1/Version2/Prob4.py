@@ -1,3 +1,32 @@
+#unit 4
+#session 1
+#ver 2
+#prob 4
+
+
+# Assumption
+# every char in the str is lowercase
+# empty str is possible
+# str cannot be null
+
+# High Level Planning
+# * Two pointer technique
+#   * create two pointers. iterate over the list and compare two pointer var. 
+#   * if both pointers are the same, go to the next item
+#   * if not, check which one is smaller lexicographically
+#   * assign the larger char with the smaller char
+
+# Low level planning
+# * create a list of char from the str
+# * create two pointers
+# * iterate over the lst until l passes r
+#    * check if l and r var are not the same
+#      * check if r var > l var lexi
+#        * assign r var with l var
+#      * assign l var with r var
+#    * shift l to right by 1 and r to left by 1
+# * return the joined list
+
 def make_palindrome(s):
   char_lst = list(s)
   left = 0
