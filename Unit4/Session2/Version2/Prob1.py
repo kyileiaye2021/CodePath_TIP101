@@ -1,3 +1,24 @@
+#unit 4
+#session 2
+#ver2 
+#prob 1
+
+# Assumption 
+# lst1 and lst2 cannot be empty or null
+# there can be repetitive nums in both lst
+
+# Low level planning
+# * Two Pointer Approach
+# * create two pointers pointing to lst1 index and lst2 index
+# * create a new list to store the vars
+# * iterate over the lists until lst1 reaches its end and lst2 reaches its end
+#   * compare lst1 curr var and lst2 curr var
+#   * if lst1 curr var > lst2 curr var
+#     * put that var in the list and increment lst1 index
+#   * otherwise, 
+#     * put that var in the list and increment lst2 index
+# * return the new lst
+
 def merge_sorted_lists(lst1, lst2):
   lst1_index = 0
   lst2_index = 0
