@@ -1,18 +1,23 @@
-def sort_array_by_parity(nums):
-  even = 0
-  odd = 1
-  while even < len(nums) and odd < len(nums):
-    while even < len(nums) and nums[even] % 2 == 0:
-      even += 2
-    while odd < len(nums) and nums[odd] % 2 == 1:
-      odd += 2
+def min_merge_operations(nums):
+  left, right = 0, len(nums) - 1
+  total_count = 0
 
-    if even < len(nums) and odd < len(nums):
-      temp = nums[even]
-      nums[even] = nums[odd]
-      nums[odd] = temp
-  return nums
-nums = [4,2,5,7]
-nums2 = [2,3]
-print(sort_array_by_parity(nums))
-print(sort_array_by_parity(nums2))
+  while left < right:
+    if nums[left] == nums[right]:
+      right -= 1
+
+    else:
+      nums[left + 1] += nums[left]
+      total_count += 1
+    left += 1
+
+  return total_count
+
+nums = [6,1,3,7]
+print(min_merge_operations(nums))
+
+nums2 = [1,3,3,1]
+print(min_merge_operations(nums2))
+
+nums3 = [1,3,2,7]
+print(min_merge_operations(nums3))
