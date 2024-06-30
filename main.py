@@ -1,19 +1,29 @@
-def squash_spaces(s):
-  char_lst = list(s)
-  unique_index = 0
-  for i in range(0, len(char_lst)):
-    if (char_lst[i] != ' '):
-      char_lst[unique_index] = char_lst[i]
-      unique_index += 1
+def is_long_pressed(name, typed):
+  if len(name) > len(typed):
+    return False
+  i = 0
+  j = 0
 
+  while j < len(typed):
+    if name[i] != typed[j]:
+      if typed[j] != typed[j-1]:
+        return False
     else:
-      if i != 0 and char_lst[i - 1] != ' ':
-        char_lst[unique_index] = char_lst[i]
-        unique_index += 1
+      i += 1
 
-  del char_lst[unique_index:]
-  return "".join(char_lst)
+    j += 1
+  return True
 
-print(squash_spaces("  hello    world  "))
-print(squash_spaces("  what  about  this    ?"))
-print(squash_spaces("this is my sentence"))
+name = "alex"
+typed = "aaleex"
+print(is_long_pressed(name, typed))
+
+name2 = "saeed"
+typed2 = "ssaaedd"
+print(is_long_pressed(name2, typed2))
+
+name3 = "courtney"
+typed3 = "courtney"
+print(is_long_pressed(name3, typed3))
+
+
