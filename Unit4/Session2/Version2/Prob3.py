@@ -1,3 +1,15 @@
+#unit 4
+#session 2
+#ver 2
+#prob 3
+
+# create two pointers 0 and 1
+# iterative over the list untill even and odd index reaches the nums lst end
+#   iterate until the even index points to odd var
+#   iterate until the odd index points to even var
+#   if both even and odd index are not out of range
+#      swap two var
+
 def sort_array_by_parity(nums):
   even = 0
   odd = 1
