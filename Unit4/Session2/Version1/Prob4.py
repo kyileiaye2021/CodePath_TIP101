@@ -3,6 +3,11 @@
 #ver 1
 #Prob 4
 
+'''
+Find the largest val for the pos pointer
+Find the smallest val for the neg pointer
+Compare them
+'''
 # Assumption
 # every ele in the list is not equal 0
 # the list cannot be empty or null
