@@ -16,7 +16,7 @@ def get_next_valid_index(string, index):
       break
     index -= 1
   return index
-
+  
 def backspace_compare(s, t):
   i, j = len(s) -1, len(t) - 1
   while i >= 0 and j >= 0:
@@ -28,7 +28,7 @@ def backspace_compare(s, t):
 
     i -= 1
     j -= 1
-
+    
   return True
 
 s = "ab#c"
