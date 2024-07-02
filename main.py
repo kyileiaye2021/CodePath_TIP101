@@ -1,44 +1,19 @@
-#unit 4
-#session 2
-#version 3
-#prob 3
-
-# Two pointer approach
-# create two pointers to point s and t last index
-def get_next_valid_index(string, index):
-  backspace = 0
-  while index >= 0:
-    if string[index] == '#':
-      backspace += 1
-    elif backspace > 0:
-      backspace -= 1
+def sorted_squares(nums):
+  squared_lst = [0] * len(nums)
+  left, right = 0, len(nums) - 1
+  for i in range(len(nums)-1, -1, -1):
+    if abs(nums[left]) > abs(nums[right]):
+      square = nums[left] ** 2
+      left += 1
     else:
-      break
-    index -= 1
-  return index
+      square = nums[right] ** 2
+      right -= 1
+    squared_lst[i] = square
+  return squared_lst
 
-def backspace_compare(s, t):
-  i, j = len(s) -1, len(t) - 1
-  while i >= 0 and j >= 0:
-    i = get_next_valid_index(s, i)
-    j = get_next_valid_index(t, j)
-
-    if i >= 0 and j >= 0 and s[i] != s[j]:
-      return False
-
-    i -= 1
-    j -= 1
-
-  return True
-
-s = "ab#c"
-t = "ad#c"
-print(backspace_compare(s, t))
-
-m = "ab##"
-n = "c#d#"
-print(backspace_compare(m, n))
-
-a = "a#c"
-b = "b"
-print(backspace_compare(a, b))
+nums = [1,2,3,4]
+sq_nums = sorted_squares(nums)
+print(sq_nums)
+nums2 = [-4,-1,0,3,10]
+sq_nums2 = sorted_squares(nums2)
+print(sq_nums2)
