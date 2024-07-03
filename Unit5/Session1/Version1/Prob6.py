@@ -1,11 +1,10 @@
 #unit 5
 #session 1
 #ver 1
-#prob 5
-
+#prob 6
 
 '''
-Add new function in the class: choose()
+Added a new method in class : add_type(new_type)
 '''
 
 class Pokemon:
@@ -30,10 +29,12 @@ class Pokemon:
     else:
       print(f"{self.name} is wild! Catch them if you can!")
 
+  def add_type(self, new_type):
+    self.types.append(new_type)
 
-my_pokemon = Pokemon("rattata", ["Normal"])
-my_pokemon.print_pokemon()
 
-my_pokemon.choose()
-my_pokemon.catch()
-my_pokemon.choose()
+jigglypuff = Pokemon("Jigglypuff", ["Normal"])
+jigglypuff.print_pokemon()
+
+jigglypuff.add_type("Fairy")
+jigglypuff.print_pokemon()
