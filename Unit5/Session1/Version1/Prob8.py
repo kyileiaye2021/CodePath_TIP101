@@ -1,3 +1,12 @@
+#unit 5
+#session 1
+#ver 1
+#prob 8
+
+'''
+Traverse the linked list thru obj
+update the current obj with the next object
+'''
 class Pokemon():
   def  __init__(self, name, types, evolution = None):
     self.name = name
