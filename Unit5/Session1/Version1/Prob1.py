@@ -1,3 +1,8 @@
+#unit 5
+#session 1
+#ver 1
+#prob 1
+
 class Pokemon:
   def __init__(self, name, types):
       self.name = name
