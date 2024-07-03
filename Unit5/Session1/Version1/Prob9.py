@@ -1,3 +1,8 @@
+#unit 5
+#session 1
+#ver 1
+#prob 9
+
 class Node:
   def __init__(self, value, next=None):
     self.value = value
@@ -6,8 +11,7 @@ class Node:
 
 node_one = Node('a')
 node_two = Node('b')
-node_one.next = node_two
-
-print(node_one.value)
-print(node_one.next.value)
+print(node_one.value) 
+print(node_one.next) 
 print(node_two.value)
+print(node_two.next) 
