@@ -1,3 +1,8 @@
+#unit 5
+#session 1
+#ver 1
+#prob 12
+
 class Node:
   def __init__(self, value, next=None):
     self.value = value
@@ -12,7 +17,7 @@ def print_linked_list(head):
     else:
       print(current_start.value)
     current_start = current_start.next
-
+    
 e = Node('e')
 d = Node('d',e)
 c = Node('c',d)
