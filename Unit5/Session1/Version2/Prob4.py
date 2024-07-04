@@ -1,3 +1,8 @@
+#unit 5
+#session 1
+#ver 2
+#prob 4
+
 class Card():
   def  __init__(self, suit, rank):
     self.suit = suit
@@ -9,7 +14,7 @@ class Card():
     if self.suit in suits and self.rank in ranks:
       return True
     return False
-
+    
 def print_card(self):
   print(f"{self.rank} of {self.suit}")
 
