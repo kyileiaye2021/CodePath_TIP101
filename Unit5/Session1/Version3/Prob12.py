@@ -10,7 +10,7 @@ def chase_list(chase):
     returned_str += f"{current_animal.value} "
     if current_animal.next:
       returned_str += "chases "
-      
+
     current_animal = current_animal.next
   return  returned_str
 
