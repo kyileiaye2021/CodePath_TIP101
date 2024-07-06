@@ -12,7 +12,7 @@ def get_tail(head):
     if not curr_node.next:
       return curr_node.value
     curr_node = curr_node.next
-  
+
 # linked list: num1->num2->num3
 num3 = Node(3)
 num2 = Node(2, num3)
