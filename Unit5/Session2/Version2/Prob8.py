@@ -1,3 +1,11 @@
+#unit 5
+#session2
+#ver 2
+#prob 8
+
+#iterate over the linked list to know the length
+#iterate over the linked list again to get the middle value
+
 class Node:
   def __init__(self, value, next=None):
     self.value = value
@@ -26,3 +34,11 @@ num1 = Node(1, num2)
 head = num1
 mid = find_middle_node(head)
 print(mid)
+
+'''
+Example Usage:
+
+# linked list: num1 -> num2 -> num3 -> num4
+head = num1
+mid = find_middle_node(head)
+# mid == num2'''
