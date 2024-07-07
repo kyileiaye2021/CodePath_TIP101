@@ -1,3 +1,8 @@
+#unit 5
+#session 2
+#ver 2
+#prob 3
+
 class Node:
   def __init__(self, value, next=None):
     self.value = value
@@ -20,7 +25,7 @@ while curr_node:
   else:
     print(curr_node.value)
   curr_node = curr_node.next
-
+    
 '''
 Example:
 
