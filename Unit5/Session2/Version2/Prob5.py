@@ -1,3 +1,8 @@
+#unit 5
+#session 2
+#ver 2
+#prob 5
+
 class Node:
   def __init__(self, value, next=None):
     self.value = value
@@ -21,3 +26,11 @@ num3 = Node(3)
 num2 = Node(2, num3)
 num1 = Node(1, num2)
 delete_tail(num1)
+'''
+Example Usage:
+
+# linked list: num1 -> num2 -> num3
+delete_tail(num1)
+
+# linked list: num1 -> num2
+'''
