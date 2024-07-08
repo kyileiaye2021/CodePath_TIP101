@@ -13,9 +13,9 @@ class Player:
   def get_tournament_place(self, opponents):
 
     #getting the avg of current obj
-
+  
     own_avg = sum(self.race_outcomes) / len(self.race_outcomes)
-
+    
     place = 1
     for opponent in opponents:
       opponent_avg = sum(opponent.race_outcomes) / len(opponent.race_outcomes)
@@ -30,10 +30,8 @@ player2 = Player("Luigi", "Standard", [2, 1, 3, 2, 2])
 player3 = Player("Peach", "Standard", [3, 3, 2, 3, 1])
 
 opponents = [player2, player3]
-opponents2 = [player1, player3]
-opponents3 = 
 print(f"{player1.character} was number {player1.get_tournament_place(opponents)}")
-print(f"{player2.character} was number {player2.get_tournament_place(opponents2)}")
+print(f"{player2.character} was number {player2.get_tournament_place(opponents)}")
 
 '''
 Example Output:
