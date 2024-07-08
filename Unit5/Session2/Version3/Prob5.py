@@ -1,3 +1,8 @@
+#unit 5
+#session 2
+#ver 3
+#prob 5
+
 class Node:
   def __init__(self, value, next=None):
       self.value = value
@@ -7,13 +12,13 @@ def copy_ll(head):
   curr_node = head
   temp_new_head = Node(head.value)
   new_head = temp_new_head
-  
+
   while curr_node.next:
     next_node = Node(curr_node.next.value)
     temp_new_head = Node(curr_node.value, next_node)
     curr_node = curr_node.next
     temp_new_head = temp_new_head.next
-    
+
   new_head.next = None
   return new_head
 
