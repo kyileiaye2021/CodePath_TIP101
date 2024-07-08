@@ -1,3 +1,7 @@
+#unit 5
+#session 2
+#ver 3
+#prob 2
 
 class Node:
   def __init__(self, value, next=None):
@@ -27,4 +31,3 @@ while curr_head:
   else:
     print(curr_head.value)
   curr_head = curr_head.next
-  
