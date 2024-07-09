@@ -1,21 +1,20 @@
+#unit 5
+#session 2
+#ver 3
+#prob 8
+
 class Node:
   def __init__(self, value, next=None):
       self.value = value
       self.next = next
 
 def tail_to_head(head):
-  
   #iterating thru head list until it reaches to the last one
   curr_head = head
-  new_node_val = 0
   while curr_head.next:
-    if curr_head.next and not curr_head.next.next: #for the second to last item
-      new_node_val = curr_head.next.value
-      curr_head.next = curr_head.next.next
-      break
     curr_head = curr_head.next
-    
-  node_to_be_inserted = Node(new_node_val) #last item in the linked list
+
+  node_to_be_inserted = Node(curr_head.value)
   node_to_be_inserted.next = head
   return node_to_be_inserted
 
