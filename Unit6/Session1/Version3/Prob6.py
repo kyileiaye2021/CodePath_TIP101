@@ -1,6 +1,6 @@
 #unit 6
 #session 1
-#ver 6
+#ver 3
 #prob 6
 
 class Node:
@@ -27,7 +27,7 @@ def reverse_first_k(head, k):
   prev = curr_head #prev will point to node 4 in this case
   curr_head = head #reset the curr_head to the start of the original linked list
 
-  while curr_head and length > 0:
+  while curr_head and length > 0: #reverse the first 3 nodes in linked list and connect with node 4
     next_node = curr_head.next
     curr_head.next = prev
     prev = curr_head
