@@ -3,6 +3,8 @@
 #ver 3
 #prob 1
 
+#Time complexity = O(n)
+#Space complexity = O(1)
 class Node:
   def __init__(self, value, next=None):
       self.value = value

@@ -3,11 +3,14 @@
 #ver 3
 #prob 2
 
+#Time complexity - O(n)
+#Space complexity - O(1)
+
 class Node:
   def __init__(self, value, next=None):
       self.value = value
       self.next = next
-
+    
 def print_ll(head):
   curr_head = head
   while curr_head:
@@ -17,7 +20,7 @@ def print_ll(head):
       print(curr_head.value)
     curr_head = curr_head.next
 
-
+  
 def find_cycle_head(head, meetingpoint):
   curr_head = head
   while curr_head != meetingpoint:
@@ -29,14 +32,14 @@ def find_cycle_head(head, meetingpoint):
     meetingpoint = meetingpoint.next
   meetingpoint.next = None
   return head
-
+  
 def detect_and_remove_cycle(head):
-
+  
   if not head:
     return None
   if not head.next:
     return head.value
-
+    
   #check if there is a cycle in ll
   slow, fast = head, head
   while fast and fast.next:
@@ -55,3 +58,4 @@ num2.next = num3
 num3.next = num4
 num4.next = num1
 print_ll(detect_and_remove_cycle(num1))
+  
