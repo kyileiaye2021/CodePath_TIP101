@@ -16,7 +16,7 @@ def is_identical(head_a, head_b):
       return False
     curr_head_a = curr_head_a.next
     curr_head_b = curr_head_b.next
-  return True
+  return not curr_head_a and not curr_head_b 
 
 # list1: 1->2->3->4
 # list2: 1->2->3->4
