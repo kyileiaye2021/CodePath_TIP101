@@ -32,14 +32,14 @@ def rotate_right(head, k):
 
   curr_head.next = head #making a circular ll
 
-  length_to_iterate = length - (k % length) #calculate length
+  length_to_iterate = length - (k % length) #calculate length to iterate ll until the new head is found
 
-  current_head = head #iterate the ll from the beginning
+  current_head = head #iterate the ll from the beginning upto length to iterate
   for _ in range(length_to_iterate - 1):
     current_head = current_head.next
 
-  new_head = current_head.next
-  current_head.next = None
+  new_head = current_head.next #found the new head
+  current_head.next = None #put none to current_head
 
   return new_head
 
