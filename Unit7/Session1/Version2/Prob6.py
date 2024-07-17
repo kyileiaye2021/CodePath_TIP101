@@ -24,7 +24,7 @@ def find_ceiling(lst, x):
       right = mid - 1
 
   return result
-
+  
 lst = [1, 2, 8, 10, 11, 12, 19]
 print(find_ceiling(lst, 5))
 lst2 = [2,3,4,5]

@@ -9,7 +9,7 @@ In this case, lst become empty or none at some point so we have
 to check lst is none or not as base case
 '''
 #Time complexity: O(N) [each function call processes one element of the list]
-#Space complexity O(1) [due to the recursion depth being equal to the number of elements in the list]
+#Space complexity O(N) [due to the recursion depth being equal to the number of elements in the list]
 def list_product(lst):
   if not lst:
     return 1

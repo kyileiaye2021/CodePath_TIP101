@@ -3,6 +3,25 @@
 #ver 2
 #prob 4
 
+'''
+Time complexity: 
+if n == 1: func called 1 time
+if n == 2, func called 1 time
+if n == 3, func called 1 time
+if n == 4, func called 1 time
+...
+if n == 16, func called 2 times
+...
+if n== 64, func called 3 times
+The n is reduced by the factor of 4 so time complexity log(n)
+
+Space complexity:
+Up to n = 15, the stack of the recursion is 1
+Up to n = 63, the stack of the recursion is 2
+Up to n = 255, the stack of the recursion is 3
+The recursion depth is proportional to the num of times n can be divided by 4
+so space complexity is log(n)
+'''
 # n can be 1 and greater than 1 ()
 # n cannot be 0 or -1
 
