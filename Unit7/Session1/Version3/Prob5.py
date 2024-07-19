@@ -3,6 +3,10 @@
 #ver 3
 #prob 5
 
+'''
+Time complexity: O(logn) the size of the list is reduced by half
+Space complexity: O(1)
+'''
 def binary_search(lst, target):
   # Initialize a left pointer to the 0th index in the list
   left = 0
