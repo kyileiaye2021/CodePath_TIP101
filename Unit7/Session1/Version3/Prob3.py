@@ -17,6 +17,9 @@
 # n / 10 = 5 (remainder = 2)
 # n / 10 = 0 (remainder = 5) [stop here]
 
+'''
+Time complexity: O(logn) the size of the input is reduced by the factor of 10
+Space complexity O(logn) the depth of the recursion equal to the num of times that n can be divided by 10'''
 def sum_digits(n):
   if n < 0:
     return None

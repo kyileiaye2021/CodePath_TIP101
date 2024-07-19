@@ -16,16 +16,15 @@
 # n = 55
 # n = 55 // 10 = 5
 # n = 5 / 10 = 0
-
-
 def count_sevens(n):
   #base case
-  if n == 0: 
+  if n < 0:
+    return None
+  if n == 0:
     return 0
-  elif n % 10 == 7: #if 7 is found in the n
+  if n % 10 == 7: #if 7 is found in the n
     return 1 + count_sevens(n // 10)
-  else:
-    return count_sevens(n//10)
+  return count_sevens(n/10)
 
 print(count_sevens(727))
 # Example Input: 727
