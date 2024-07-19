@@ -16,6 +16,9 @@
 # n = 55
 # n = 55 // 10 = 5
 # n = 5 / 10 = 0
+
+'''Time complexity: O(logn) depends on the num of digits
+Space complexity: O(logn) depth of recursion is proportional to the num of times that n can be divided by 10'''
 def count_sevens(n):
   #base case
   if n < 0:

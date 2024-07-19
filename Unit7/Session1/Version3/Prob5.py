@@ -12,8 +12,8 @@ def binary_search(lst, target):
   # While left pointer is less than right pointer:
   while left < right:
     # Find the middle index of the array
-    mid = (left + right) // 2 # floor division is important because the mid index cannot be float
-
+    mid = (left + right) / 2
+    
     # If the middle value is the target value, return True
     if target == lst[mid]:
       return True
@@ -23,7 +23,7 @@ def binary_search(lst, target):
     # If the middle value is greater than the target value, search the left half of the list
     else:
       right = mid - 1
-
+    
   # Return False if the target element has not been found
   return False
 
