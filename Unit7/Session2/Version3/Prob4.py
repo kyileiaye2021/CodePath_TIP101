@@ -39,13 +39,13 @@ def find_last(lst, target):
   return right
 
 def find_frequencies(lst):
-  frequencies = {}
+  frequencies = {} #O(n)
   lst_len = len(lst)
   i = 0
-  while i < lst_len:
+  while i < lst_len: #O(n)
 
-    first = find_first(lst, lst[i])
-    last = find_last(lst, lst[i])
+    first = find_first(lst, lst[i]) #O(logn)
+    last = find_last(lst, lst[i]) #O(logn)
     count = last - first + 1
     frequencies[lst[i]] = count
 
@@ -56,3 +56,6 @@ def find_frequencies(lst):
 lst = [2, 2, 2, 4, 4, 4, 5, 5, 6, 8, 8, 9]
 print(find_frequencies(lst))
 # Expected Output: {2: 3, 4: 3, 5: 2, 6: 1, 8: 2, 9: 1}
+
+#Time complexity : O(nlogn)
+#Space complexity : O(n)
