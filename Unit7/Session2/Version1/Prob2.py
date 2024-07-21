@@ -3,6 +3,8 @@
 #ver 1
 #prob 2
 
+# Problem 2: How Many 1s
+
 # Two pointer technique (binary search)
 # itereate until the low passes high
 # find mid index

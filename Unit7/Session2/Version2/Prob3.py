@@ -42,4 +42,4 @@ lst4 = []
 print(count_zeros(lst4)) #0
 
 #Time complexity : O(logn)
-#Space complexity: O(1)
+#Space complexity: O(log(n))
