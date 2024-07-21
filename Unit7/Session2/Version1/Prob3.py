@@ -4,6 +4,9 @@
 #prob 3
 
 # [1, 2, 3], target = 3 -> 2
+#Time complexity: O(logn) #everytime the func is called, the size is reduced by half
+# Space complexity: O(logn) #the depth of recursion being equal to the num of func called
+
 def binary_search(nums, target):
   return binary_search_recursive(nums, 0, len(nums) - 1, target)
 
