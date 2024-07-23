@@ -3,6 +3,15 @@
 #ver 1
 #Prob 6
 
+'''
+Assumption:
+All elements are unique
+'''
+
+'''
+In this problem, we also need to check if the low ele is greater than or less than target to
+know which part of the lst we need to search.
+Also, we need to check if it is within the low and mid or the mid and high to shift around low and high pointers'''
 # Two pointer approach | binary search algo
 # create two pointers
 # iterate until left passes right
@@ -20,7 +29,8 @@
 #        shift left to right
 #      otherwise, shift right to left
 
-
+#Time - O(logn)
+#Space = O(1)
 # Example Input: nums = [8, 9, 10, 2, 5, 6], target = 10
 def search_circular_list(nums, target):
   low, high = 0, len(nums) - 1
