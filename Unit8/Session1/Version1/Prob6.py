@@ -4,6 +4,8 @@
 #prob 6
 
 # In-order traversal (left - current - right)
+# time - O(n)
+# space - O(n)
 class TreeNode():
    def __init__(self, val, left=None, right=None):
        self.val = val

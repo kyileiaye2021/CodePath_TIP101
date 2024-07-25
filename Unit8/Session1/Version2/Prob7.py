@@ -5,6 +5,8 @@
 
 #Binary Tree Product
 # return the product of the node values
+# time - O(n)
+# space - O(n)
 class TreeNode():
    def __init__(self, value, left=None, right=None):
        self.val = value

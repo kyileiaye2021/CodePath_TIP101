@@ -4,6 +4,7 @@
 #prob 7
 
 # size of tree (total numbers of nodes)
+# time - 
 '''
 Using pre-order traversal method to count the node'''
 class TreeNode():

@@ -4,7 +4,8 @@
 #prob 6
 
 #pre-order traversal (current - left - right)
-
+# Time - O(n)
+# Space - O(n)
 class TreeNode():
      def __init__(self, value, left=None, right=None):
          self.val = value

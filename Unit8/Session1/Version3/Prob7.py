@@ -8,7 +8,8 @@ class TreeNode():
        self.val = value
        self.left = left
        self.right = right
-
+# time : O(n)
+# space: O(n)
 def is_lesser(root,value):
 
    if not root:
