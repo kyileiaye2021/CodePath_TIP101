@@ -4,7 +4,8 @@
 #prob 8
 
 # Binary Tree Is Leaf
-
+# Time - O(n)
+#Space - O(n)
 '''
 check the value is the same as the val of leaf node in the tree
 '''

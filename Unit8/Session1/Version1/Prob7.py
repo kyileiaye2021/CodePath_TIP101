@@ -4,7 +4,8 @@
 #prob 7
 
 # size of tree (total numbers of nodes)
-# time - 
+# time - O(n)
+# space - O(n)
 '''
 Using pre-order traversal method to count the node'''
 class TreeNode():
