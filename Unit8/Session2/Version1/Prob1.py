@@ -1,3 +1,6 @@
+#unit 8
+#session 2
+# ver 1
 # Problem 1
 # check the val of every node is the same or not
 # Traverse the left and right subtree 
