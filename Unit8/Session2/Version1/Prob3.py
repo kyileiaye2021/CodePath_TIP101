@@ -12,10 +12,10 @@ class TreeNode():
 
 def insert(root, key, value):
   if not root:
-    return TreeNode(key, value) #insert the new node as root node if the tree is empty
+    return TreeNode(key, value)
 
   if key > root.key:
-    root.right = insert(root.right, key, value) #don't forget to connect with the prev left or right 
+    root.right = insert(root.right, key, value)
   elif key < root.key:
     root.left = insert(root.left, key, value)
   else:  
