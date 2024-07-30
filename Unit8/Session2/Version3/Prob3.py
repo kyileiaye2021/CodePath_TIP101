@@ -4,6 +4,8 @@
 #Prob 3
 
 # BST insertion
+# Time complexity - O(n)
+# Space complexity - O(n) 
 
 class TreeNode():
    def __init__(self, value, left=None, right=None):
