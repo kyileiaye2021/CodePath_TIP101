@@ -3,7 +3,7 @@
 #ver 1
 #prob 4
 
-#remove the node from BST tree
+#remove the node from BST tree (in-order successor)
 
 class TreeNode():
    def __init__(self, key, value, left=None, right=None):
