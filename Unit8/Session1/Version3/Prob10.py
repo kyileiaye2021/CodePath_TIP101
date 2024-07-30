@@ -34,7 +34,7 @@ class TreeNode():
 
 def sum_leaves(root):
   if not root:
-    return 0
+    return False
 
   if not root.left and not root.right: #if the node is the leaf node
     return root.val 
@@ -44,13 +44,11 @@ def sum_leaves(root):
 
 
 def helper_func_leaf_sum(root):
-    if not root:
-        return False
-    sum = sum_leaves(root)
-    return(sum == root.val)
-
+  sum = sum_leaves(root)
+  return(sum == root.val)
+  
 root = TreeNode(10, TreeNode(5), TreeNode(5))
 print(helper_func_leaf_sum(root))
 
-root1 = None
+root1 = TreeNode(10)
 print(helper_func_leaf_sum(root1))
