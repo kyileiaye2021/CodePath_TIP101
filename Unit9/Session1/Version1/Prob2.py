@@ -29,17 +29,14 @@ def binary_tree_paths_helper(root, res_lst, temp_str):
   if not root: # return empty str
     return "" 
 
-  # append the current value to the str
   if temp_str:
     temp_str += '->' + str(root.val) 
   else:
     temp_str += str(root.val)
-
-  # append the str if the node is a leaf node
+    
   if not root.left and not root.right: #if the curr node is a leaf node
     res_lst.append(temp_str)
 
-  # if the curr node is not the leaf, go to left and right subtree
   else:
     binary_tree_paths_helper(root.left, res_lst, temp_str)
     binary_tree_paths_helper(root.right, res_lst, temp_str)
