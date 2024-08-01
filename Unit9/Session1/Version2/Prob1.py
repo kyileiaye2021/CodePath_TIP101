@@ -44,4 +44,4 @@ root2 = TreeNode("OR", TreeNode('AND', TreeNode(False), TreeNode(False)), TreeNo
 print(evaluate_tree(root2)) #False
 
 '''
-Time Complexity: '''
+Time Complexity: O(n)'''

@@ -17,7 +17,7 @@
 # call the helper func
 # return the lst
 
-
+'''Time complexity: O(n)'''
 class TreeNode:
   def __init__(self, val=0, left=None, right=None):
       self.val = val

@@ -17,6 +17,7 @@
 # if there are two children
 # call the recursive func for both left and right subtrees 
 
+'''Time complexity - O(n)'''
 
 class TreeNode:
   def __init__(self, val=0, left=None, right=None):

@@ -33,6 +33,7 @@
 #   check the curr node's operator val
 #    call recursive funcs on left and right subtree with that operator
 
+'''Time complexity - O(n) we have to go over every node in the tree'''
 
 class TreeNode:
   def __init__(self, val=None, left=None, right=None):
