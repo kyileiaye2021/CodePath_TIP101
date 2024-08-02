@@ -21,6 +21,10 @@
 # append the element in the lst
 # recursively call on the right subtree
 
+'''
+Time complexity - O(n)
+Space complexity - O(n)
+'''
 class TreeNode:
   def __init__(self, val=0, left=None, right=None):
       self.val = val
