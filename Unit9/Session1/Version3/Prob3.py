@@ -67,3 +67,8 @@ print(has_path_sum(root, 22)) # True
 
 root2 = TreeNode(1, TreeNode(2), TreeNode(3))
 print(has_path_sum(root2, 5)) # False
+
+'''
+Time complexity-O(n) all nodes in the tree were visited
+Space complexity - O(n) lst func was created and the depth of the recursion equal to the func of the tree
+'''
