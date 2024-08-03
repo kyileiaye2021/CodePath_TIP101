@@ -18,6 +18,10 @@ after a func is terminated, the var value get back to the original value
 #   update the second min
 # call recursive helper func on left and right subtree
 
+'''
+Time complexity - O(n) (every node in the tree is visited)
+Space complexity - O(n)
+'''
 class TreeNode:
   def __init__(self, val=0, left=None, right=None):
       self.val = val
