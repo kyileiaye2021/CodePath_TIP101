@@ -3,6 +3,10 @@
 #ver 3
 #prob 1
 
+'''
+Time complexity - O(n)
+Space complexity - O(n)
+'''
 from collections import deque
 
 class TreeNode:
