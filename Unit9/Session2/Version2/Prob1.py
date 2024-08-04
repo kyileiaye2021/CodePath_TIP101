@@ -3,6 +3,10 @@
 #ver 2
 #prob 1
 
+'''
+Time complexity - O(n) Every node in the tree is visitied
+Space complexity - O(n) 
+'''
 from collections import deque # This is a popular library used for queues
 
 class TreeNode:
@@ -15,7 +19,7 @@ def print_by_level(root):
   # If the tree is empty:
     #return
   if not root:
-    return
+    return 
 
   # Create an empty queue using deque
   queue = deque()
