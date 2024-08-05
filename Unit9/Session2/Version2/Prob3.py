@@ -92,3 +92,6 @@ print(level_max(root3)) # 2
 
 root4 = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6), TreeNode(7)))
 print(level_max(root4)) # 4
+
+# Time complexity - O(N)
+# Space complexity - O(N)
