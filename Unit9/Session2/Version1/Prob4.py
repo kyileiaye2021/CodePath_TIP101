@@ -38,6 +38,8 @@ Input Tree
 
 #return level lst
 
+# Time complexity - O(n)
+# Space complexity - O(n)
 from collections import deque
 class TreeNode:
   def __init__(self, value=0, left=None, right=None):
