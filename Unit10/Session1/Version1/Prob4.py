@@ -3,12 +3,6 @@
 #ver 1
 #prob 4
 
-'''
-In dict, we can't use immutable containers such as dict or lst as key
-Hashmap
-* using tuple as key in hashmap
-* using lst as value in hashmap
-'''
 # Example #1:
 # Input: strs = ["eat","tea","tan","ate","nat","bat"]
 # Expeced Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
@@ -42,23 +36,24 @@ def group_anagrams(strs):
   main_dict = {}
 
   for word in strs:
-    char_lst = []
-
+    freq_dict = {}
+    
     for char in word:
-      char_lst.append(char)
-    
-    char_tuple = tuple(sorted(char_lst))
-    
-    if char_tuple not in main_dict:
-      main_dict[char_tuple] = [word]
+      if char not in freq_dict:
+        freq_dict[char] = 1
+      else:
+        freq_dict[char] += 1
+
+    if freq_dict not in main_dict:
+      main_dict[freq_dict] = [word]
     else:
-      main_dict[char_tuple].append(word)
+      main_dict[freq_dict].append(word)
 
   res_lst = []
 
   for val_lst in main_dict.values():
     res_lst.append(val_lst)
-
+    
   return res_lst
 
 strs = ["eat","tea","tan","ate","nat","bat"]
