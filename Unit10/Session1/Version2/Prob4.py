@@ -47,7 +47,7 @@ def dfs(root):
 def check_root_sum(root):
   if not root:
     return True
-  
+
   left_subtree = dfs(root.left)
   right_subtree = dfs(root.right)
   return root.val == (left_subtree + right_subtree)
