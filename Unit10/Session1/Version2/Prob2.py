@@ -28,9 +28,6 @@ class Node:
     self.next = next
 
 def reverse(head):
-  if not head:
-    return None
-    
   prev = None
 
   curr_node = head
@@ -43,14 +40,11 @@ def reverse(head):
   return prev
 
 def print_ll(root):
-  if not root:
-    print(None)
-    return
   while root.next:
-    print(f'{root.value} -> ',end='')
+    print(f'{root.val} -> ')
     root = root.next
 
-  print(root.value)
+  print(root.val)
 
 head = Node(1, Node(2, Node(3, Node(4))))
 print_ll(reverse(head)) #4 -> 3 -> 2 -> 1
@@ -60,5 +54,5 @@ print_ll(reverse(head)) # 1
 
 head = None
 print_ll(reverse(head)) # None
-
+  
 
