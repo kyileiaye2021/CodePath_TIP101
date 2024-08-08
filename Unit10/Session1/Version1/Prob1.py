@@ -1,3 +1,8 @@
+#unit 1
+#session 1
+#ver 1
+#prob 1
+
 # initialize an empty stack
 # go over the string and 
 # check if each char is open paranthesis:
