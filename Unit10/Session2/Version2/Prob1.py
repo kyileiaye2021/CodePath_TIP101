@@ -28,9 +28,9 @@ def generate_possible_next_moves(current_state):
     if current_state[i] == '+' and current_state[i + 1] == '+':
       new_state = current_state[ : i] + '--' + current_state[i+2 : ]
       res.append(new_state)
-
+      
   return res
-
+  
 input = "++++"
 print(generate_possible_next_moves(input)) # ["--++","+--+","++--"]
 
